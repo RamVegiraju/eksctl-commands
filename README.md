@@ -4,13 +4,9 @@ Some popular commands when getting started with [AWS EKS](https://aws.amazon.com
 
 ## Commands
 ```
-
 # List clusters in a region
 eksctl get cluster --region us-east-1
 
-
 # Get information on nodes in cluster
 kubectl get nodes -o custom-columns=NAME:.metadata.name,INSTANCE:.metadata.labels."beta\.kubernetes\.io/instance-type",ZONE:.metadata.labels."topology\.kubernetes\.io/zone"
-
-
 ```
