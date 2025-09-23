@@ -7,6 +7,13 @@ Some popular commands when getting started with [AWS EKS](https://aws.amazon.com
 # List clusters in a region
 eksctl get cluster --region us-east-1
 
+# Connecting to a cluster
+aws eks update-kubeconfig --name <enter name here> --region us-east-1
+
+# Validate cluster connection
+kubectl config current-context
+
 # Get information on nodes in cluster
 kubectl get nodes -o custom-columns=NAME:.metadata.name,INSTANCE:.metadata.labels."beta\.kubernetes\.io/instance-type",ZONE:.metadata.labels."topology\.kubernetes\.io/zone"
+
 ```
