@@ -16,4 +16,7 @@ kubectl config current-context
 # Get information on nodes in cluster
 kubectl get nodes -o custom-columns=NAME:.metadata.name,INSTANCE:.metadata.labels."beta\.kubernetes\.io/instance-type",ZONE:.metadata.labels."topology\.kubernetes\.io/zone"
 
+# Active namespaces
+kubectl get namespaces
+
 ```
